@@ -1,0 +1,24 @@
+{
+  "format_version": "1.12.0",   //注：此文件仅为ce文件编写示例
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "nacal_sdc:your_entity",
+      "particle_effects": {
+        "health_bar": "nacal_sdc:health_bar" //将nacal_sdc:health_bar这个粒子的名字定义为health_bar
+      },
+      "animations": {
+        "health_bar": "animation.health_bar" //将animation.health_bar这个动画的名字定义为health_bar
+      },
+      "scripts": {
+        "animate": [
+          "idle", //此行为示例，无需复制
+          "lookat_target", //此行为示例，无需复制
+          {
+            "weapon": "query.is_tamed == 1" //此行为示例，无需复制
+          },
+          "health_bar" //将health_bar这个动画加入实体的常态播放动画，实体会重复播放此动画
+        ]              //从而在“health_bar”锚点位置播放“health_bar”粒子，做到常显血条
+      }
+    }
+  }
+}

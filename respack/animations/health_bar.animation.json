@@ -1,0 +1,15 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.health_bar": {
+			"loop": true,
+			"animation_length": 0.08,
+			"particle_effects": {
+				"0.0": {
+					"effect": "health_bar",
+					"locator": "health_bar"
+				}
+			}
+		}
+	}
+}
